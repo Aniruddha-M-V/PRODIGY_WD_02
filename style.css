@@ -1,0 +1,127 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+html{
+    scroll-behavior: smooth scroll;
+}
+body{
+    font-family: "Roboto";
+}
+h1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.stopwatch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 290px;
+    height: 290px;
+    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    border-radius: 50%;
+    transition: all .3s;
+    margin: 3% auto;
+}
+
+.stopwatch2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 280px;
+    margin: 0.3rem 0.3rem;
+    background-color: white;
+    border-radius: 50%;
+}
+.min,.sec,.msec{
+    font-size: clamp(4rem, 8vw, 4rem);
+}
+.min
+{
+    color:blue
+}
+.btns{
+    height:5rem;
+    width:60%;
+    margin: 2% auto;
+    display: flex;
+    padding-top: 2rem;
+    justify-content: space-evenly;
+}
+.btn{
+    height:50px;
+    width: 50px;
+    border-radius: 50%;
+    border:none;
+    cursor: pointer;
+    background-image: linear-gradient(144deg, #919191, #aaaaaa 50%, #dbdbdb);
+    transition: 300ms ease-in-out;
+}
+.btn:hover{
+    transform: scale(1.2);
+}
+.btn:active {
+    transform: scale(0.9);
+}
+
+#startBtn {
+    align-items: center;
+    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    border: 0;
+    border-radius: 50%;
+    margin-top: -0.5rem;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    font-size: 1px;
+    justify-content: center;
+    line-height: 1em;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: 70px;
+    width: 70px;
+}
+
+#startBtn:active,
+#startBtn:hover {
+    outline: 0;
+    transform: scale(1.1);
+}
+
+#startBtn span {
+    padding-top: 4.09rem;
+    padding-left:0.04rem;
+    font-size: 1.8rem;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+
+
+#startBtn:active {
+    transform: scale(0.9);
+}
+.laps{
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lap-time 
+{
+    font-size: 2rem;
+    font-weight: 500;
+    margin:0;
+    color: #333;
+}
