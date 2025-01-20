@@ -31,7 +31,7 @@ function startStopwatch() {
     startTime = Date.now() - elapsedTime;
     intervalId = setInterval(updateTime, 10);
     document.getElementById("startBtn").querySelector(".text").innerHTML =
-      '<i class="fa-solid fa-pause fa-lg"></i>';
+      '<i class="fa-solid fa-pause fa-lg" style="margin-left:-0.13rem"></i>';
   }
   isRunning = !isRunning;
 }
@@ -62,15 +62,24 @@ function lapStopwatch() {
 }
 
 function updateLaps() {
-  const lapsList = document.querySelector(".laps");
-  lapsList.innerHTML = "";
+    const lapsList = document.querySelector(".laps");
+    lapsList.innerHTML = ""; // Clear existing laps
 
-  laps.forEach((lap, index) => {
-    const lapElement = document.createElement("p");
-    lapElement.textContent = `Lap ${index + 1}: ${lap}`;
-    lapsList.appendChild(lapElement);
-  });
+    laps.forEach((lap, index) => {
+        const lapElement = document.createElement("p");
+        lapElement.className = "lap-time";
+        lapElement.textContent = `Lap ${index + 1}: ${lap}`;
+        lapsList.appendChild(lapElement);
+
+        // Add a horizontal rule unless it's the last lap
+        if (index < laps.length - 1) {
+            const divider = document.createElement("hr");
+            divider.className = "lap-divider";
+            lapsList.appendChild(divider);
+        }
+    });
 }
+
 document.getElementById("startBtn").addEventListener("click", startStopwatch);
 document.querySelector(".btn[name='reset']").addEventListener("click", resetStopwatch);
 document.querySelector(".btn[name='lap']").addEventListener("click", lapStopwatch);
