@@ -142,4 +142,11 @@ h1{
             padding-top: 2rem;
             justify-content: space-evenly;
         }
+        .lap-divider {
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(to right, #6d6d6d, #acacac);
+            border: none;
+            margin: 0.5rem auto;
+        }
 }
