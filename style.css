@@ -143,7 +143,7 @@ h1{
             justify-content: space-evenly;
         }
         .lap-divider {
-            width: 65%;
+            width: 60%;
             height: 2px;
             background: linear-gradient(to right, #6d6d6d, #acacac);
             border: none;
