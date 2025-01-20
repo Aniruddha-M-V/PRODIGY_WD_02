@@ -96,7 +96,7 @@ h1{
 
 #startBtn span {
     padding-top: 4.09rem;
-    padding-left:0.04rem;
+    padding-left:0.15rem;
     font-size: 1.8rem;
     border-radius: 6px;
     width: 100%;
@@ -108,8 +108,8 @@ h1{
 #startBtn:active {
     transform: scale(0.9);
 }
-.laps{
-    margin-top: 0.5rem;
+.laps {
+    margin-top: 1rem;
     font-size: 1.3rem;
     display: flex;
     flex-wrap: wrap;
@@ -118,12 +118,19 @@ h1{
     align-items: center;
 }
 
-.lap-time 
-{
-    font-size: 2rem;
+.lap-time {
+    font-size: 1.5rem;
     font-weight: 500;
-    margin:0;
+    margin: 0.5rem 0;
     color: #333;
+}
+
+.lap-divider {
+    width: 20%;
+    height: 2px;
+    background: linear-gradient(to right, #6d6d6d, #acacac);
+    border: none;
+    margin: 0.5rem auto;
 }
 @media (max-height:1000px) and (max-width:500px)
 {
